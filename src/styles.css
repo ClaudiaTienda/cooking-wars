@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+.cooking{
+    font-family: "Ravie", serif;
+    font-size: 50px;
+}
+
+.recetaimagen{
+    background-repeat: no-repeat;
+    background-position: center;
+}
