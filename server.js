@@ -9,7 +9,7 @@ app.use(express.static(__dirname + '/dist/cooking-wars'));
 
 app.get('/*', function(req,res) {
     
-res.sendFile(path.join(__dirname+'/dist/cooking-wars/index.html'));
+res.sendFile(path.join(__dirname+'/dist/cooking-wars/src/index.html'));
 });
 
 // Start the app by listening on the default Heroku port
