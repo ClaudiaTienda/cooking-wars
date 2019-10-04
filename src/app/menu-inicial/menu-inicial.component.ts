@@ -27,4 +27,10 @@ export class MenuInicialComponent implements OnInit {
   inicio(): void {
     this.router.navigate(['/inicio']);
   }
+
+  opciones(): void {
+    this.router.navigate(['/opciones']);
+  }
+
+
 }
