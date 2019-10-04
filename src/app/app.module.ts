@@ -7,6 +7,7 @@ import { MenuInicialComponent } from './menu-inicial/menu-inicial.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { JuegoComponent } from './juego/juego.component';
 import { OpcionesComponent } from './opciones/opciones.component';
+import { PuntuacionesComponent } from './puntuaciones/puntuaciones.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { OpcionesComponent } from './opciones/opciones.component';
     MenuInicialComponent,
     InicioComponent,
     JuegoComponent,
-    OpcionesComponent
+    OpcionesComponent,
+    PuntuacionesComponent
   ],
   imports: [
     BrowserModule,
