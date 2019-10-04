@@ -1,0 +1,88 @@
+<html>
+<head>
+	<title>1.1 Introduccion</title>
+	<script type="text/javascript" src="/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="/three/three.js"></script>
+	<script type="text/javascript">
+
+//crear variables escenario
+	let scene;
+	let renderer;
+	let camera;
+//
+
+//
+
+	$(document).ready(function() {
+
+//crear el canvas
+	let canvasSize={
+		width: window.innerWidth,
+		height: window.innerHeight
+	}
+
+//inicializar el canvas
+	renderer = new THREE.WebGLRenderer();
+	renderer.setClearColor(new THREE.Color(0,0,0));
+	renderer.setSize(
+		canvasSize.width,
+		canvasSize.height
+	);
+
+//inicializar la camara
+	camera = new THREE.PerspectiveCamera(
+			75, //Angulo de apertura
+			canvasSize.width / canvasSize.height,//Relacion y aspecto
+			0.1, //Lo que alcanza a mirar
+			100 //Lo lejos que puede ver
+		);
+//Inicializar la escena
+		scene = new THREE.Scene();
+
+		//Agregar la etiqueta canvas dentro del div
+		$("#scene-section").append(renderer.domElement);
+
+		//Mover la camera
+		camera.position.z = 3;
+		//camera.position.set(0, 0, 20);
+
+		//Iluminacion
+		//Luz ambiental
+		let ambient = new THREE.AmbientLight(
+			new THREE.Color(1,1,1), //Color
+			1.0 //Intensidad
+		);
+		//Luz direccional
+		let directional = new THREE.DirectionalLight(
+			new THREE.Color(1,1,0), //Color
+			0.4 //Intensidad
+		);
+		directional.position.set(0,0,1);
+
+//
+
+//
+		scene.add(ambient);
+		scene.add(directional);
+//
+
+//
+		render();
+	});
+
+	function render() {
+		renderer.render(scene,camera);
+//
+
+//
+		requestAnimationFrame(render);
+	}
+	</script>
+</head>
+
+<body>
+
+	<div id="scene-section"/>
+
+</body>
+</html>
