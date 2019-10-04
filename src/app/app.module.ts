@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { MenuInicialComponent } from './menu-inicial/menu-inicial.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { JuegoComponent } from './juego/juego.component';
+import { OpcionesComponent } from './opciones/opciones.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuInicialComponent,
     InicioComponent,
-    JuegoComponent
+    JuegoComponent,
+    OpcionesComponent
   ],
   imports: [
     BrowserModule,
