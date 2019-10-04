@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, Routes } from '@angular/router';
 
 @Component({
   selector: 'app-puntuaciones',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PuntuacionesComponent implements OnInit {
 
+  router: Router;
   constructor() { }
 
   ngOnInit() {
   }
 
+  inicio(): void {
+    this.router.navigate(['/inicio']);
+  }
 }
